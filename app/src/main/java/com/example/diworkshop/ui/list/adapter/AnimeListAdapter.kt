@@ -24,6 +24,15 @@ class AnimeListAdapter(
 
     override fun getItemCount(): Int = items.size
 
+    fun updateData(newItems: List<AnimeInfo>) {
+        items.apply {
+            clear()
+            addAll(newItems)
+        }
+
+        notifyDataSetChanged()
+    }
+
     fun interface AnimeItemClickListener {
         fun onClick(animeInfo: AnimeInfo)
     }

@@ -1,14 +1,14 @@
 package com.example.diworkshop.ui.list
 
 import androidx.lifecycle.ViewModel
-import androidx.navigation.NavDirections
+import androidx.lifecycle.asLiveData
+import com.example.diworkshop.models.usecases.LoadAnimeListUseCase
 import javax.inject.Inject
 
 class AnimeListViewModel @Inject constructor(
-
+    private val useCase: LoadAnimeListUseCase
 ) : ViewModel() {
 
-    fun getNavDirection(animeName: String): NavDirections {
-        return AnimeListFragmentDirections.toDetail(animeName)
-    }
+    val loadResult = useCase()
+        .asLiveData()
 }

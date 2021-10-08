@@ -7,6 +7,5 @@ class GetAnimeListResponse(
     @SerializedName("success")
     val success: Boolean,
 
-    @SerializedName("data")
-    val data: List<AnimeInfo>
+    val data: Array<AnimeInfo>
 )

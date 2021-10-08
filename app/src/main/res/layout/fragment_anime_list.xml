@@ -11,4 +11,11 @@
         tools:itemCount="5"
         tools:listitem="@layout/item_anime_list" />
 
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/progressIndicator"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_gravity="center"
+        android:indeterminate="true"/>
+
 </FrameLayout>
