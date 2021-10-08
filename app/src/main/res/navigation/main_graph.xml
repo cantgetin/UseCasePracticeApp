@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/animeListFragment">
+
+    <fragment
+        android:id="@+id/animeListFragment"
+        android:name="com.example.diworkshop.ui.list.AnimeListFragment">
+
+        <action
+            android:id="@+id/toDetail"
+            app:destination="@id/animeDetailFragment">
+
+            <argument
+                android:name="animeName"
+                app:argType="string"
+                app:nullable="false" />
+
+        </action>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/animeDetailFragment"
+        android:name="com.example.diworkshop.ui.details.AnimeDetailsFragment">
+
+        <argument
+            android:name="animeName"
+            app:argType="string"
+            app:nullable="false" />
+
+    </fragment>
+</navigation>
