@@ -9,7 +9,7 @@ interface AnimeService {
     @GET("api/v1/")
     suspend fun getAnimeList(): GetAnimeListResponse
 
-    @GET("/{animeName}")
+    @GET("api/v1/{animeName}")
     suspend fun getAnimeDetailInfo(
         @Path("animeName") animeName: String
     ): GetAnimeDetailInfoResponse

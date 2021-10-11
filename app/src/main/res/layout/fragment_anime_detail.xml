@@ -33,8 +33,6 @@
         android:id="@+id/textView"
         android:layout_width="132dp"
         android:layout_height="78dp"
-        android:text=
-        android:animeName
         tools:layout_editor_absoluteX="77dp"
         tools:layout_editor_absoluteY="430dp"
         tools:ignore="MissingConstraints" />

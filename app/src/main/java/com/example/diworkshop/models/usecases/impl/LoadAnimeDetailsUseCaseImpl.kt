@@ -23,8 +23,8 @@ class LoadAnimeDetailsUseCaseImpl @Inject constructor(
         return flow {
             emit(LoadingResult.Processed)
 
-            val animeList = repository.getAnimeDetailInfo(name)
-            val loadingResult = LoadingResult.Success(animeList)
+            val anime = repository.getAnimeDetailInfo(name)
+            val loadingResult = LoadingResult.Success(anime)
 
             emit(loadingResult)
         }.catch { throwable ->

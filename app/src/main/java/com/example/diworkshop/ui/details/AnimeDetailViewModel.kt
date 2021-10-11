@@ -13,8 +13,12 @@ class AnimeDetailViewModel  @Inject constructor(
     private val useCase: LoadAnimeDetailsUseCase
 ) : ViewModel() {
 
-    var animeName: String = "dd"
-    val loadResult = useCase(animeName)
-        .asLiveData()
+    var animeName: String = "jujutsu_kaisen"
+    var loadResult = useCase(animeName).asLiveData()
+
+    fun loadResultFun()
+    {
+        loadResult = useCase(animeName).asLiveData()
+    }
 
 }
