@@ -1,6 +1,8 @@
 package com.example.diworkshop.di.modules
 
+import com.example.diworkshop.models.usecases.LoadAnimeDetailsUseCase
 import com.example.diworkshop.models.usecases.LoadAnimeListUseCase
+import com.example.diworkshop.models.usecases.impl.LoadAnimeDetailsUseCaseImpl
 import com.example.diworkshop.models.usecases.impl.LoadAnimeListUseCaseImpl
 import com.example.diworkshop.models.usecases.impl.LoadAnimeListUseCaseImpl2
 import dagger.Binds
@@ -26,6 +28,9 @@ interface AnimeModule {
 
     @Binds
     fun bindLoadAnimeListUseCase(useCase: LoadAnimeListUseCaseImpl): LoadAnimeListUseCase
+
+    @Binds
+    fun bindLoadAnimeDetailsUseCase(useCase: LoadAnimeDetailsUseCaseImpl): LoadAnimeDetailsUseCase
 }
 
 //@Qualifier
